@@ -3,10 +3,11 @@ PHIẾU CÁ NHÂN — DAY 14
 Không dán ảnh, toạ độ điểm hay nội dung file export vào đây.
 
 Họ tên / mã học viên: Hoàng Anh Tuấn / 2A202602233
-Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01: J01-d / track 1
+Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01: J01-d / track 1 (chỉ gán nhãn duy nhất 1 phương tiện J01-d, không gán nhãn toàn cảnh toàn bộ phương tiện)
 Phiên bản CVAT / overlay đã bật (có/không): v2.74.1 / có
 
 J01 — TRACK LÕI
+Phạm vi gán nhãn: Chỉ thực hiện gán nhãn duy nhất 1 phương tiện là J01-d xuyên suốt frame 13–65 theo đúng yêu cầu bài lab (không gán nhãn toàn cảnh).
 Frame fit và lý do: Frame 65 vì xe ở gần nhất (~16.5m), điểm LiDAR dày đặc nhất để fit kích thước chuẩn L/W/H.
 L / W / H (m): 4.24 / 2.18 / 1.94
 Keyframe quan trọng và lý do: Frames 65 bởi vì đây là frame hiển thị xe rõ nhất
