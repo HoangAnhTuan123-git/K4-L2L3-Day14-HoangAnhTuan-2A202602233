@@ -1,0 +1,4 @@
+track_id,frame,error,detail
+0,15,position_jump,tam box nhay 3.4 m (dau hieu ID switch)
+0,16,position_jump,tam box nhay 5.2 m (dau hieu ID switch)
+0,13,no_interpolation,53/53 frame la keyframe — co the dang ve tay tung frame

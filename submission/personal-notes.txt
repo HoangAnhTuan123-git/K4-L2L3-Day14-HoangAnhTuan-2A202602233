@@ -2,34 +2,34 @@ PHIẾU CÁ NHÂN — DAY 14
 Điền file này, chạy QC vào submission/qc-j01 và submission/qc-practice, commit rồi nộp link repo.
 Không dán ảnh, toạ độ điểm hay nội dung file export vào đây.
 
-Họ tên / mã học viên:
-Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01:
-Phiên bản CVAT / overlay đã bật (có/không):
+Họ tên / mã học viên: Hoàng Anh Tuấn / 2A202602233
+Object J01 (a/b/c/d theo docs/cases.md) / track ID trong task J01: J01-d / track 1
+Phiên bản CVAT / overlay đã bật (có/không): v2.74.1 / có
 
 J01 — TRACK LÕI
-Frame fit và lý do:
-L / W / H (m):
-Keyframe quan trọng và lý do:
-Đã bấm F qua đủ frame 0–65 (có/không):
-Đoạn thưa / che khuất / dễ nhầm identity:
+Frame fit và lý do: Frame 65 vì xe ở gần nhất (~16.5m), điểm LiDAR dày đặc nhất để fit kích thước chuẩn L/W/H.
+L / W / H (m): 4.24 / 2.18 / 1.94
+Keyframe quan trọng và lý do: Frames 65 bởi vì đây là frame hiển thị xe rõ nhất
+Đã bấm F qua đủ frame 0–65 (có/không): có
+Đoạn thưa / che khuất / dễ nhầm identity: Frame 13 là frame bắt đầu xuất hiện, khó nhìn, thưa.
 
 SELF-QC (từ qc_tracks.csv / qc_flags.csv)
-Lần QC đầu — cờ của track J01 (loại, frame):
-Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do:
-Đã sửa gì sau QC đầu; QC cuối còn cờ nào:
-Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao:
+Lần QC đầu — cờ của track J01 (loại, frame): position_jump (frame 15, 16), no_interpolation (frame 13)
+Quyết định cho từng cờ (sửa / giữ vì hợp lệ / chưa đủ evidence) và lý do: Giữ vì hợp lệ. Ở frame 13-16 xe ở cự ly rất xa (>90m) điểm LiDAR thưa và xe di chuyển nhanh dẫn đến bước nhảy tâm tương đối lớn nhưng cùng identity xe J01-d. no_interpolation do người làm căn chỉnh kỹ từng frame.
+Đã sửa gì sau QC đầu; QC cuối còn cờ nào: Giữ nguyên kích thước tham chiếu (drift = 0.0), giải thích các cờ hợp lệ.
+Nhận xét của bạn cùng cặp và bạn đồng ý/không đồng ý vì sao: Đồng ý với việc giữ nguyên kích thước vật rắn và giải thích bước nhảy do khoảng cách xa.
 
 CAMERA–LIDAR (overlay trên image_1)
-Ca bình thường (frame / quan sát):
-Ca khó (frame / quan sát 2D / quan sát 3D):
-Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence):
-Hành động (sửa / giữ / báo Lab Coach) và lý do:
+Ca bình thường (frame / quan sát): Frame 65 / xe ở gần, cụm điểm dày, cuboid 3D khớp khít với thân xe trên camera trước image_1.
+Ca khó (frame / quan sát 2D / quan sát 3D): Frame 15 / trên 2D xe rất nhỏ ở rìa FOV, trên 3D chỉ có vài chấm phản xạ thưa thớt.
+Giả thuyết nguyên nhân (annotation / FOV / occlusion / sparse / nghi calibration / chưa đủ evidence): sparse / occlusion
+Hành động (sửa / giữ / báo Lab Coach) và lý do: Giữ / giữ cuboid theo kích thước chuẩn 4.24 x 2.18 x 1.94 m đã xác lập ở frame 65, tuân thủ nguyên tắc vật rắn.
 
 CASE NGẮN (task practice)
-Case → track ID (ví dụ B01 → 3):
-Case đã xong:
-Case đang dở / chỗ kẹt:
-fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không):
+Case → track ID (ví dụ B01 → 3): B01 → 1, B02 → 2, B03 → 3, B05 → 4
+Case đã xong: B01, B02, B03, B05
+Case đang dở / chỗ kẹt: Không
+fragmentation_suspect ở đầu/cuối case đã kiểm là do cách cắt case (có/không): có
 
 THỜI GIAN
-J01 / case ngắn / QC và fusion:
+J01 / case ngắn / QC và fusion: 75 phút / 40 phút / 20 phút
